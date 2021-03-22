@@ -15,14 +15,14 @@
             <div class="table-responsive">
                 <table class="table table-light">
                     <thead class="text-center">
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Image</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Contact</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Edit</th>
-                    </tr>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Contact</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Edit</th>
+                        </tr>
                     </thead>
                     <tbody class="showList">
                     </tbody>
@@ -34,7 +34,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="footer">
-                <p>&copy; <a href="#">Animal Planet </a> | 2021</p>
+                <p>&copy; <a href="#">Homeo Medica </a> | 2021</p>
                 <p>
                     Contact information:
                     <a href="mailto:someone@example.com">someone@example.com</a>.
@@ -45,15 +45,14 @@
 </div>
 
 <script>
-
-    $(document).ready(function () {
+    $(document).ready(function() {
         $.ajax({
             url: '../hospital/index.php',
             method: 'get',
-            success: function (response) {
+            success: function(response) {
                 var json = JSON.parse(response);
                 var x = 0;
-                $.each(json.hospitals, function (key, value) {
+                $.each(json.hospitals, function(key, value) {
                     x++;
                     $('.showList').append('<tr><th>' + x + '' +
                         '</th><td><img height="80" width="100" src="../userview/uploads/' + value['URL'] + '" alt=""/>' +
@@ -69,7 +68,7 @@
             }
         });
 
-        $(document).on('click', '#deleteHospital', function () {
+        $(document).on('click', '#deleteHospital', function() {
             var el = this;
             var id = $(this).data('id');
             $.ajax({
@@ -78,9 +77,9 @@
                 data: {
                     'id': id,
                 },
-                success: function (response) {
+                success: function(response) {
                     $(el).closest('tr').css('background', 'tomato');
-                    $(el).closest('tr').fadeOut(800, function () {
+                    $(el).closest('tr').fadeOut(800, function() {
                         $(el).remove();
                     });
                     console.log(response);
@@ -89,5 +88,4 @@
         });
 
     });
-
 </script>

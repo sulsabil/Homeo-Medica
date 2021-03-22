@@ -36,12 +36,10 @@ if (Session::get("user_type") == 'admin') {
     <div class="index-header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="siteFooterBar">
-                    <div class="content">
-                        <img src="./resources/images/Ulala s.png" width="50px" height="50px" align="center">
-
-                    </div>
-                </div>
+                <!-- Brand/logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="../userview/resources/images/Ulala s.png" alt="logo" style="width:40px;">
+                </a>
                 <a class="navbar-brand" href="index.php">HOMEO MEDICA</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -116,7 +114,7 @@ if (Session::get("user_type") == 'admin') {
                         <img src="./resources/images/about-img.png" alt="" />
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div id="about" class="col-md-6">
                     <div class="about-content">
                         <h2 class="section-header">About Us</h2>
                         <p class="text-color">
@@ -131,7 +129,7 @@ if (Session::get("user_type") == 'admin') {
             </div>
         </div>
     </div>
-    <div class="section why-us-section">
+    <div id="why" class="section why-us-section">
         <div class="container">
             <h2 class="section-header">Why Homeo Medica</h2>
             <div class="row">
@@ -167,7 +165,7 @@ if (Session::get("user_type") == 'admin') {
         </div>
     </div>
 
-    <div class="section need-help-section">
+    <div id="need" class="section need-help-section">
         <div class="container">
             <h2 class="section-header text-center">Need any support?</h2>
             <div class="row">
@@ -178,7 +176,9 @@ if (Session::get("user_type") == 'admin') {
                             Homeo Medica is the leading source of online veterinarian advice.
                             Obtain brief answers or chat with a veterinarian privately about your dog, cat or any other pet
                         </p>
-                        <button class="btn btn-default my-2 my-sm-0 px-5 py-2 need-help-button">Ask question
+                        <button class="btn btn-default my-2 my-sm-0 px-5 py-2 need-help-button">
+                            <a style="color: black;" href="all-questions.php">Ask Questions </a>
+
                         </button>
                     </div>
                 </div>
@@ -189,7 +189,9 @@ if (Session::get("user_type") == 'admin') {
                             Homeo Medica is the leading source of online veterinarian advice.
                             Obtain brief answers or chat with a veterinarian privately about your dog, cat or any other pet
                         </p>
-                        <button class="btn btn-default my-2 my-sm-0 px-5 py-2 need-help-button">Find hospital
+                        <button class="btn btn-default my-2 my-sm-0 px-5 py-2 need-help-button">
+                            <a style="color: black;" href="./all-hospitals.php">Find Hospital</a>
+
                         </button>
                     </div>
                 </div>
@@ -202,12 +204,10 @@ if (Session::get("user_type") == 'admin') {
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="siteFooterBar">
-                            <div class="content">
-                                <img src="./resources/images/Ulala s.png" width="100px" height="100px" align="center">
-
-                            </div>
-                        </div>
+                        <!-- Brand/logo -->
+                        <a class="navbar-brand" href="#">
+                            <img src="../userview/resources/images/Ulala s.png" alt="logo" style="width:100%;">
+                        </a>
                     </div>
                     <div class="col-md-3">
                         <ul>
@@ -220,14 +220,14 @@ if (Session::get("user_type") == 'admin') {
                     <div class="col-md-3">
                         <ul>
                             <a class="nav-link" style="color:#ffb548" href="index.php">Login </a>
-                            <a class="nav-link" style="color:#ffb548" href="#">About Us </a>
-                            <a class="nav-link" style="color:#ffb548" href="#">Why Homeo Medica </a>
+                            <a class="nav-link" style="color:#ffb548" href="#about">About Us </a>
+                            <a class="nav-link" style="color:#ffb548" href="#why">Why Homeo Medica </a>
 
                         </ul>
                     </div>
                     <div class="col-md-3">
                         <ul>
-                            <a class="nav-link" style="color:#ffb548" href="#">Need Any Support </a>
+                            <a class="nav-link" style="color:#ffb548" href="#need">Need Any Support </a>
                             <a class="nav-link" style="color:#ffb548" href="#">Review </a>
                             <a class="nav-link" style="color:#ffb548" href="#">Contact </a>
                         </ul>

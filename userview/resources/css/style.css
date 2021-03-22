@@ -17,6 +17,10 @@ a {
     font-family: sans-serif;
 }
 
+.siteFooterBar {
+    text-align: center;
+}
+
 .header-color {
     color: #0b0837;
 }

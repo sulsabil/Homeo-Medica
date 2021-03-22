@@ -139,12 +139,10 @@ $response = NotificationController::getNotification(Session::get('id'));
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="siteFooterBar">
-                            <div class="content">
-                                <img src="./resources/images/Ulala s.png" width="100px" height="100px" align="center">
-
-                            </div>
-                        </div>
+                        <!-- Brand/logo -->
+                        <a class="navbar-brand" href="#">
+                            <img src="../userview/resources/images/Ulala s.png" alt="logo" style="width:100%;">
+                        </a>
                     </div>
                     <div class="col-md-3">
                         <ul>
